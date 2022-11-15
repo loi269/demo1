@@ -99,7 +99,7 @@ section li ul{
 } 
 #content ul li:hover>a{
     background: #333333;
-    color: #FFFFFF;
+    color: #be4f4f;
 } 
 section li>ul li{
     width: 50%;

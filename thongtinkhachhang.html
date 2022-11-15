@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form ban hang</title>
+    <style>
+        body{
+            width: 1500px;
+            height: 900px;
+            background-color: rgb(255, 252, 251);
+        }
+        h1{
+            color: rgb(214, 66, 12);
+        }
+        #left{
+            width:400px ;
+            height: 600px;
+            border-style: solid;
+            border-width: thin;
+            margin-left: 50px;
+            margin-top: 50px;
+            float: left;
+        }
+        #inhoadon{
+            color: rgb(214, 66, 12);
+        }
+        #right{
+            width: 900px;
+            height: 800px;
+            border-style: solid;
+            border-width: thin;
+            float: right;     
+        }
+        #anh{
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+        #cach{
+            margin-left: 40px;
+        }
+        #nr{
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: rgb(214, 66, 12);
+        }
+        #cach1{
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        #con{
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="left">      
+        <table cellspacing="20px">
+            <caption style="margin-top: 10px">
+                <h1>Thông tin khách hàng</h1>
+            </caption>
+            <tr>
+                <td>Họ tên khách hàng :</td>
+                <td><input id="tenKh" type="text"></td>
+            </tr>
+            <tr>
+                <td>Số điện thoại     :</td>
+                <td><input id="soDt" type="number"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ           :</td>
+                <td><textarea id="diaChi" name="" id="" cols="21" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Tên sản phẩm :</td>
+                <td><input id="tenSp" type="text"></td>
+            </tr>
+            <tr>
+                <td>Hãng sản xuất :</td>
+                <td><input id="hangSx" type="radio" name="a" value="Iphone" >Iphone <input id="hangSx" type="radio" name="a" value="samsung">samsung <br>
+                    <input id="hangSx" type="radio" name="a" value="Oppo">Oppo <input id="hangSx" type="radio" name="a" value="Xiaomi">Xiaomi <br>
+                    <input id="hangSx" type="radio" name="a" value="Huawei">Huawei
+                </td>
+            </tr>
+            <tr>
+                <td>Đơn giá :</td>
+                <td><input id="donGia" type="text"></td>
+            </tr>
+            <tr>
+                <td>Số lượng :</td>
+                <td><input id="soLuong" type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input id="inhoadon" type="button" value="In hóa đơn" onclick="inHoaDon()"
+                    onmouseenter ="this.style.background='violet'"
+                    onmouseleave ="this.style.background='blue'">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="right">
+        <img id="anh" src="image/bt3.jpg" alt=""><br><br><br><br>
+        <div id="cach">           
+            <div id="nr">NORTHERN VIỆT NAM</div>
+            <div>Chuyên cung cấp các giải pháp phần mềm</div>
+            <div>Địa chỉ : Lê Trọng Tấn, Hà Đông, HN </div>
+            <div>ĐT Hotline : 035232xxxx</div>
+            <div>Website : non.vn</div>
+            <div id="nr">HÓA ĐƠN BÁN LẺ</div>
+        </div>
+        <div id="cach1">
+            <div>Họ tên khách hàng : <span id="name"></span> </div>
+            <div>Điện thoại : <span id="phone"></span></div>
+            <div>Địa chỉ : <span id="address"></span></div>
+            <table border="1" style="width: 850px; border-collapse: collapse;" >
+                <tr>
+                    <th>STT</th>
+                    <th>Tên hàng hóa và quy cách sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>% Giảm giá</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td><p id="sp1"></p></td>
+                    <td><p id="sl1"></p></td>
+                    <td><p id="dg1"></p></td>
+                    <td><p id="gg1"></p></td>
+                    <td><p id="tt1"></p></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td><p id="sp1"></p></td>
+                    <td><p id="sl1"></p></td>
+                    <td><p id="dg1"></p></td>
+                    <td><p id="gg1"></p></td>
+                    <td><p id="tt1"></p></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td><p id="sp1"></p></td>
+                    <td><p id="sl1"></p></td>
+                    <td><p id="dg1"></p></td>
+                    <td><p id="gg1"></p></td>
+                    <td><p id="tt1"></p></td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td><p id="sp1"></p></td>
+                    <td><p id="sl1"></p></td>
+                    <td><p id="dg1"></p></td>
+                    <td><p id="gg1"></p></td>
+                    <td><p id="tt1"></p></td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td><p id="sp1"></p></td>
+                    <td><p id="sl1"></p></td>
+                    <td><p id="dg1"></p></td>
+                    <td><p id="gg1"></p></td>
+                    <td><p id="tt1"></p></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Tổng Cộng</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+<script>
+    function inHoaDon(){
+        document.getElementById('right').style.display = "block";
+
+        var tenKh = document.getElementById('tenKh').value;
+        var soDt = document.getElementById('soDt').value;
+        var diaChi = document.getElementById('diaChi').value;
+        var tenSp = document.getElementById('tenSp').value;
+        var hangSx = document.querySelector('input[name = "hangSx"]:check').value;
+        //
+        var donGia = document.getElementById('donGia').value;
+        var soLuong = document.getElementById('soLuong').value;
+
+
+        //bien phan hoa don
+        var sp1 = document.getElementById('sp1');
+        var sl1 = document.getElementById('sl1');
+        var dg1 = document.getElementById('dg1');
+        var gg1 = document.getElementById('gg1');
+        var tt1 = document.getElementById('tt1');
+
+        var name = document.getElementById('name');
+        var phone = document.getElementById('phone');
+        var address = document.getElementById('address');
+
+        //
+        //
+        //
+
+        sp1.innerHTML = hangSx +" "+ tensp;
+        sl1.innerHTML = soLuong;
+        dg1.innerHTML = donGia + "đ";
+        gg1.innerHTML = gg1.value *100 +"%";
+        tt1.innerHTML = soLuong*donGia - (soLuong*donGia*gg1.value);
+
+        name.innerHTML = tenKh;
+        phone.innerHTML = soDt;
+        address.innerHTML = diaChi;
+    }
+</script>
+</body>
+</html>
